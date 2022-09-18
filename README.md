@@ -3,7 +3,7 @@
 A GDExtension to use GodotSteam without compiling Godot for Godot 4 and latest
 
 ### How to Use
-download the compiled binaries, extract them and just place the gdsteam folder in the res://addons folder before opening godot
+download the compiled [binaries](https://github.com/ash-hashtag/gdsteam/releases/tag/0.0.1), extract them and just place the gdsteam folder in the res://addons folder before opening godot
 that means open godot to initialize project and close it, then place this "gdsteam" folder
 it should automatically work on start
 
