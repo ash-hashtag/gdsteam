@@ -1,0 +1,8 @@
+[configuration]
+
+entry_symbol = "gdextension_init"
+
+[libraries]
+
+windows.debug.x86_64 = "bin/libgdsteam.windows.debug.x86_64.dll"
+windows.release.x86_64 = "bin/libgdsteam.windows.release.x86_64.dll"

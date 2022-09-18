@@ -18,7 +18,7 @@ sources = Glob("src/*.cpp")
 
 # Find the project name from the gdextension file (e.g. example).
 # project_name = Path(extension_path).stem
-project_name = "gdextension"
+project_name = "gdsteam"
 
 # TODO: Cache is disabled currently.
 # scons_cache_path = os.environ.get("SCONS_CACHE")
@@ -42,7 +42,8 @@ if env["platform"] == "windows":
     env.Append(LIBS=["steam_api64"])
     env.Append(LIBPATH=["src/sdk/redistributable_bin/win64"])
     library = env.SharedLibrary(
-        "output/bin/lib{}.{}.{}.{}{}".format(
+        "output/{}/bin/lib{}.{}.{}.{}{}".format(
+            project_name,
             project_name,
             env["platform"],
             env["target"],
@@ -51,6 +52,7 @@ if env["platform"] == "windows":
         ),
         source=sources,
     )
+    print(library)
     # library = env.SharedLibrary(
     #     "{0}/bin/lib{1}.{2}.{3}.{4}{5}".format(
     #         addon_path,
