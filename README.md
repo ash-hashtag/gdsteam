@@ -23,3 +23,4 @@ modify SConstruct as you need
 
 ### Documentation
 you can follow exactly godotsteam documentation, this is just a wrapper for it.
+https://gramps.github.io/GodotSteam/
