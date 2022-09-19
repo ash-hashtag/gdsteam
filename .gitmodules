@@ -2,3 +2,6 @@
 	path = godot-cpp
 	url = https://github.com/godotengine/godot-cpp.git
 	branch = master
+[submodule "godotsteam"]
+	path = godotsteam
+	url = https://github.com/Gramps/GodotSteam.git
