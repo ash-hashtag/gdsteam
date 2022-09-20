@@ -26,17 +26,62 @@ project_name = "gdsteam"
 #     CacheDir(scons_cache_path)
 #     print("Scons cache enabled... (path: '" + scons_cache_path + "')")
 
-# Create the library target (e.g. libexample.linux.debug.x86_64.so).
+# # Create the library target (e.g. libexample.linux.debug.x86_64.so).
 # if env["platform"] == "macos":
+#     print("building for macos")
+#     env.Append(LIBS=["libsteam_api"])
+#     env.Append(LIBPATH=["src/sdk/redistributable_bin/osx"])
 #     library = env.SharedLibrary(
-#         "{0}/bin/lib{1}.{2}.{3}.framework/{1}.{2}.{3}".format(
-#             addon_path,
+#         "output/{}/bin/lib{0}.{1}.{2}.framework/{0}.{1}.{2}".format(
 #             project_name,
 #             env["platform"],
 #             env["target"],
 #         ),
 #         source=sources,
 #     )
+# # else:
+# else:
+#     if env["platform"] == "windows":
+#         if env["arch_suffix"] == "x86_64":
+#             print("building for windows x86_64")
+#             env.Append(LIBS=["steam_api64"])
+#             env.Append(LIBPATH=["src/sdk/redistributable_bin/win64"])
+#         else:
+#             print("building for windows x86_32")
+#             env.Append(LIBS=["steam_api"])
+#             env.Append(LIBPATH=["src/sdk/redistributable_bin"])
+
+#     elif env["platform"] == "linux":
+#         if env["arch_suffix"] == "x86_64" :
+#             print("building for linux x86_64")
+#             env.Append(LIBS=["libsteam_api"])
+#             env.Append(LIBPATH=["src/sdk/redistributable_bin/linux64"])
+#         else:
+#             print("building for linux x86_32")
+#             env.Append(LIBS=["libsteam_api"])
+#             env.Append(LIBPATH=["src/sdk/redistributable_bin/linux64"])
+#     library = env.SharedLibrary(
+#         "output/{}/bin/lib{}.{}.{}.{}{}".format(
+#             project_name,
+#             project_name,
+#             env["platform"],
+#             env["target"],
+#             env["arch_suffix"],
+#             env["SHLIBSUFFIX"],
+#         ),
+#         source=sources,
+#     )
+#     # library = env.SharedLibrary(
+#     #     "{0}/bin/lib{1}.{2}.{3}.{4}{5}".format(
+#     #         addon_path,
+#     #         project_name,
+#     #         env["platform"],
+#     #         env["target"],
+#     #         env["arch_suffix"],
+#     #         env["SHLIBSUFFIX"],
+#     #     ),
+#     #     source=sources,
+#     # )
 # else:
 if env["platform"] == "windows":
     env.Append(LIBS=["steam_api64"])
@@ -52,7 +97,6 @@ if env["platform"] == "windows":
         ),
         source=sources,
     )
-    print(library)
     # library = env.SharedLibrary(
     #     "{0}/bin/lib{1}.{2}.{3}.{4}{5}".format(
     #         addon_path,
