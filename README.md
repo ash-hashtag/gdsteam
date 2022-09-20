@@ -36,5 +36,6 @@ I couldn't find ipaddress class within gdextension files, maybe it doesn't have 
 1: GodotSteam depends on core libraries, but gdextension doesn't support all core libraries  
 2: GDExtension doesn't seem to support uint8 or uint16, so when generating bindings throws errors, so I replaced all of them uint32, and type casted. I would like to automate this, then we can have GodotSteam as submodule. That means this is a copy of GodotSteam src but modified, so I can't straight up rely on GodotSteam, every time it updates, we have to update this.
 
-## NOTE: IT DOESN'T WORK ANYMORE
-The compiled ones work, but something got broke when I changed submodule, trying to fix
+### Note: 
+This is just to keep up with rapid development of godot 4, that means this may not support all features of godotsteam, this is just a substitute till actual godotsteam release, so you can work without waiting for godotsteam official build, and maybe godotsteam itself might become a gdextension in future  
+since the api is exactly same you won't get any trouble switching.
