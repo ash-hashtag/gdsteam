@@ -12,7 +12,7 @@ currently compiled version are for windows 64 bit only, but you can compile them
 ### Compiling
 just make sure you link steam_api correctly, and after compiling place the steam_api dll file beside the compiled output
 run 'scons' for default debug build
-run 'scons target=release' for release build
+run 'scons target=release' for release build  
 NOTE: current SConstruct is written only for windows
 your output should be in output/gdsteam
 copy the gdsteam folder to the project's res://addons/
@@ -33,5 +33,8 @@ https://gramps.github.io/GodotSteam/
 I couldn't find ipaddress class within gdextension files, maybe it doesn't have one yet? So I copied that class from godot source code
 
 #### Not a fork of GodotSteam
-1: GodotSteam depends on core libraries, but gdextension doesn't support all core libraries
+1: GodotSteam depends on core libraries, but gdextension doesn't support all core libraries  
 2: GDExtension doesn't seem to support uint8 or uint16, so when generating bindings throws errors, so I replaced all of them uint32, and type casted. I would like to automate this, then we can have GodotSteam as submodule. That means this is a copy of GodotSteam src but modified, so I can't straight up rely on GodotSteam, every time it updates, we have to update this.
+
+## NOTE: IT DOESN'T WORK ANYMORE
+The compiled ones work, but something got broke when I changed submodule, trying to fix
