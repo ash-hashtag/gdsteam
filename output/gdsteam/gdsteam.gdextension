@@ -4,5 +4,8 @@ entry_symbol = "gdextension_init"
 
 [libraries]
 
-windows.debug.x86_64 = "bin/libgdsteam.windows.debug.x86_64.dll"
-windows.release.x86_64 = "bin/libgdsteam.windows.release.x86_64.dll"
+windows.release.x86_64 = "lib/libgdsteam.windows.release.x86_64.dll"
+windows.debug.x86_64 = "lib/libgdsteam.windows.debug.x86_64.dll"
+
+linux.release.x86_64 = "lib/libgdsteam.linux.release.x86_64.so"
+linux.debug.x86_64 = "lib/libgdsteam.linux.debug.x86_64.so"

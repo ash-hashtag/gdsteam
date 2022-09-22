@@ -20,6 +20,7 @@
 
 // Include some Godot headers
 #include <godot_cpp/classes/ip.hpp>
+#include <godot_cpp/variant/utility_functions.hpp>
 #include "ip_address.hpp"
 // #include "core/io/ip_address.h"
 // #include "core/io/ip.h"
